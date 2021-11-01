@@ -1,0 +1,20 @@
+{
+    "name": "mauedev/combustivelonline",
+    "description": "Site Desenvolvido para cotacao do preco de combustivel da regiao",
+    "authors": [
+        {
+            "name": "MaueDev",
+            "email": "mauricio.rsc.mg@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "app/helpers/constants.php",
+            "app/router/router.php"
+        ],
+        "psr-4": {
+            "app\\":"app"
+        }
+    }
+}
