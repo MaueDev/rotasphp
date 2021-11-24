@@ -2,13 +2,8 @@
 
 function routes()
 {
-    return [
-        '/' => 'home@index',
-        '/user/create' => 'user@create',
-        '/user/[0-9]+' => "user@show"/*,
-        '/user/[0-9]+/name/[a-z]+' => "User@show",*/
-        
-    ];
+    require 'routes.php';
+    return $routesarray;
 }
 
 function exactMatchUriInArrayRoutes($uri, $routes)
@@ -80,8 +75,8 @@ function router()
 
     if(!empty($matchedUri))
     {
-        controller($matchedUri, $params);
-        return;
+        return controller($matchedUri, $params);
+        
     }
 
     throw new Exception("Algo deu Errado");
